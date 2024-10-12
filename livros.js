@@ -1,9 +1,9 @@
 const cors = require('cors');
-router.use(cors());
-
 const express = require('express'); // pacotes a serem utilizados
-const router = express.Router();
 const dbKnex = require('./data/db_config'); // dados de conexão com o banco de dados
+const router = express.Router();
+
+router.use(cors());
 
 // método get é usado para consulta
 router.get('/', async (req, res) => {
